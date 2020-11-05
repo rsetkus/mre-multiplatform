@@ -1,0 +1,5 @@
+MreMultiplatform/.idea/
+*.iml
+.idea
+logs
+.DS_Store

@@ -1,0 +1,38 @@
+.gradle
+/local.properties
+.idea
+.DS_Store
+/build
+/captures
+buildSrc/build
+buildSrc/out
+buildSrc/.gradle
+common/build
+
+*.podspec
+*.zip
+
+*.hprof
+
+# Exclude module build
+e module .gradle directory
+#/app/build
+#/SharedCode/build
+
+# Built application files
+*.apk
+*.ap_
+
+# Files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# Log files
+*.log
+
+# Temporary files
+*~
+*.swp
+
