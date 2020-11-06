@@ -74,6 +74,8 @@ kotlin {
             dependencies {
                 implementation(kotlin("test"))
                 implementation(kotlin("test-junit"))
+                implementation("io.ktor:ktor-client-mock-jvm:1.4.1")
+                implementation("io.ktor:ktor-client-tests-jvm:1.4.1")
             }
         }
 
