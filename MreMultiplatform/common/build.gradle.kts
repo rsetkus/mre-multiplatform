@@ -51,7 +51,7 @@ kotlin {
                 implementation("io.ktor:ktor-client-serialization:1.4.1")
                 implementation("io.ktor:ktor-client-logging:1.4.1")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1")
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9-native-mt-2")
                 implementation("com.squareup.sqldelight:runtime:1.4.3")
             }
         }
