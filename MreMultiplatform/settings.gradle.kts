@@ -1,3 +1,3 @@
 rootProject.name = "MreMultiplatform"
 
-include(":common")
+include(":common", ":library")

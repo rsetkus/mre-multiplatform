@@ -8,6 +8,7 @@ buildSrc/build
 buildSrc/out
 buildSrc/.gradle
 common/build
+library/build
 
 *.podspec
 *.zip
