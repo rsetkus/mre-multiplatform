@@ -36,7 +36,13 @@ kotlin {
         publishLibraryVariants("release", "debug")
         publishLibraryVariantsGroupedByFlavor = true
     }
-    ios()
+    ios {
+        binaries {
+            framework {
+                baseName = "MRELIB"
+            }
+        }
+    }
 
     sourceSets {
         val commonMain by getting {
@@ -51,6 +57,30 @@ kotlin {
             }
         }
         val iosMain by getting {
+            dependencies {
+
+            }
+        }
+
+        val iosX64Main by getting {
+            dependencies {
+
+            }
+        }
+
+        val iosX64Test by getting {
+            dependencies {
+
+            }
+        }
+
+        val iosArm64Main by getting {
+            dependencies {
+                dependsOn(iosMain)
+            }
+        }
+
+        val iosArm64Test by getting {
             dependencies {
 
             }
