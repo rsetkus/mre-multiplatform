@@ -1,7 +1,7 @@
 plugins {
+    id("com.android.library")
     kotlin("multiplatform")
     kotlin("plugin.serialization") version "1.4.10"
-    id("com.android.library")
     id("com.squareup.sqldelight")
 }
 
@@ -33,7 +33,10 @@ android {
 }
 
 kotlin {
-    android()
+    android {
+        publishLibraryVariants("release", "debug")
+        publishLibraryVariantsGroupedByFlavor = true
+    }
 
     ios {
         binaries {
