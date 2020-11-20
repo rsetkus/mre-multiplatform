@@ -48,6 +48,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(kotlin("stdlib-common"))
+                api(project(":common"))
             }
         }
         val commonTest by getting {

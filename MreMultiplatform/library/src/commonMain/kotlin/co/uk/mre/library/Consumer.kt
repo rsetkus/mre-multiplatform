@@ -1,7 +1,9 @@
 package co.uk.mre.library
 
-class Consumer {
-    fun printMessage() {
+import co.uk.mre.print
 
+class Consumer {
+    fun printMessage(message: String) {
+        print(message)
     }
 }
