@@ -1,7 +1,6 @@
 plugins {
     id("com.android.library")
     kotlin("multiplatform")
-    kotlin("plugin.serialization") version "1.4.10"
 }
 
 apply(plugin = "maven-publish")
@@ -32,10 +31,8 @@ android {
 }
 
 kotlin {
-    android {
-        publishLibraryVariants("release", "debug")
-        publishLibraryVariantsGroupedByFlavor = true
-    }
+    android()
+
     ios {
         binaries {
             framework {

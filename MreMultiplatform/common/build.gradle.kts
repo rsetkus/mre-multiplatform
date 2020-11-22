@@ -1,14 +1,12 @@
 plugins {
     id("com.android.library")
     kotlin("multiplatform")
-    kotlin("plugin.serialization") version "1.4.10"
-    id("com.squareup.sqldelight")
 }
+
+apply(plugin = "maven-publish")
 
 group = "co.uk.mre-multiplatform-library"
 version = "0.0.1"
-
-apply(plugin = "maven-publish")
 
 android {
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
@@ -33,10 +31,7 @@ android {
 }
 
 kotlin {
-    android {
-        publishLibraryVariants("release", "debug")
-        publishLibraryVariantsGroupedByFlavor = true
-    }
+    android()
 
     ios {
         binaries {
@@ -50,12 +45,6 @@ kotlin {
             dependencies {
                 implementation(kotlin("stdlib-common"))
                 implementation("io.ktor:ktor-client-core:1.4.1")
-                implementation("io.ktor:ktor-client-json:1.4.1")
-                implementation("io.ktor:ktor-client-serialization:1.4.1")
-                implementation("io.ktor:ktor-client-logging:1.4.1")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1")
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9-native-mt-2")
-                implementation("com.squareup.sqldelight:runtime:1.4.3")
             }
         }
 
@@ -63,8 +52,6 @@ kotlin {
             dependencies {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
-                implementation("io.ktor:ktor-client-mock:1.4.1")
-                implementation("io.ktor:ktor-client-tests:1.3.1")
             }
         }
 
@@ -77,8 +64,6 @@ kotlin {
             dependencies {
                 implementation(kotlin("test"))
                 implementation(kotlin("test-junit"))
-                implementation("io.ktor:ktor-client-mock-jvm:1.4.1")
-                implementation("io.ktor:ktor-client-tests-jvm:1.4.1")
             }
         }
 
@@ -94,8 +79,6 @@ kotlin {
         val iosX64Main by getting {
             dependencies {
                 dependsOn(iosMain)
-                implementation("io.ktor:ktor-client-mock-iosx64:1.4.1")
-                implementation("io.ktor:ktor-client-tests-iosx64:1.4.1")
             }
         }
 
@@ -114,8 +97,6 @@ kotlin {
         val iosArm64Test by getting {
             dependencies {
                 dependsOn(iosTest)
-                implementation("io.ktor:ktor-client-mock-iosarm64:1.4.1")
-                implementation("io.ktor:ktor-client-tests-iosarm64:1.4.1")
             }
         }
     }
